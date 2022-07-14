@@ -1,0 +1,170 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/GDForms/Scenes/OptionGrid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/GDForms/Themes/default_forms_theme.tres" type="Theme" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 11.0
+margin_bottom = 13.0
+theme = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+margin_right = 643.0
+margin_bottom = 733.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 623.0
+margin_bottom = 713.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+margin_right = 603.0
+margin_bottom = 20.0
+text = "Option grid: one selection per row"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 603.0
+margin_bottom = 124.0
+
+[node name="OptionGrid" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 287.0
+margin_bottom = 100.0
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 291.0
+margin_right = 311.0
+margin_bottom = 100.0
+
+[node name="OptionGrid2" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 315.0
+margin_right = 603.0
+margin_bottom = 100.0
+disabled = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 603.0
+margin_bottom = 148.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 152.0
+margin_right = 603.0
+margin_bottom = 252.0
+
+[node name="OptionGrid2" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_right = 287.0
+margin_bottom = 100.0
+draw_line = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 291.0
+margin_right = 311.0
+margin_bottom = 100.0
+
+[node name="OptionGrid3" parent="HBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 315.0
+margin_right = 603.0
+margin_bottom = 100.0
+disabled = true
+draw_line = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 647.0
+margin_right = 1291.0
+margin_bottom = 733.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/PanelContainer2"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 624.0
+margin_bottom = 713.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/VBoxContainer2"]
+margin_right = 604.0
+margin_bottom = 20.0
+text = "Option grid: multiple selections per row"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer2/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 604.0
+margin_bottom = 124.0
+
+[node name="OptionGrid" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 288.0
+margin_bottom = 100.0
+multiple_selections = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer"]
+margin_left = 292.0
+margin_right = 312.0
+margin_bottom = 100.0
+
+[node name="OptionGrid2" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 316.0
+margin_right = 604.0
+margin_bottom = 100.0
+disabled = true
+multiple_selections = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer2/VBoxContainer2"]
+margin_top = 128.0
+margin_right = 604.0
+margin_bottom = 148.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer2/VBoxContainer2"]
+margin_top = 152.0
+margin_right = 604.0
+margin_bottom = 252.0
+
+[node name="OptionGrid2" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer2" instance=ExtResource( 1 )]
+margin_right = 288.0
+margin_bottom = 100.0
+multiple_selections = true
+draw_line = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer2"]
+margin_left = 292.0
+margin_right = 312.0
+margin_bottom = 100.0
+
+[node name="OptionGrid3" parent="HBoxContainer/PanelContainer2/VBoxContainer2/HBoxContainer2" instance=ExtResource( 1 )]
+margin_left = 316.0
+margin_right = 604.0
+margin_bottom = 100.0
+disabled = true
+multiple_selections = true
+draw_line = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "One", "Two" ]

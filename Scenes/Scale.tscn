@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/GDForms/Scenes/Options.tscn" type="PackedScene" id=1]
+
+[node name="Scale" instance=ExtResource( 1 )]
+direction = 0
+label_position = 2
+minimum_spacing = 20
+draw_line = true
+labels = [ "Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree" ]
+
+[node name="Container" parent="." index="0"]
+margin_right = 419.0
+margin_bottom = 42.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 5

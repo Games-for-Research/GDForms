@@ -1,0 +1,279 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/GDForms/Dock/gdforms_dock.gd" type="Script" id=1]
+
+[node name="Godot Forms" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CreateForm" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 24.0
+
+[node name="FormId" type="LineEdit" parent="VBoxContainer/CreateForm"]
+margin_right = 1154.0
+margin_bottom = 24.0
+hint_tooltip = "Type in an optional identifier for the form that will be used when submitting. You can change this value afterwards in the Inspector."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Form ID"
+
+[node name="CreateFormButton" type="Button" parent="VBoxContainer/CreateForm"]
+margin_left = 1158.0
+margin_right = 1280.0
+margin_bottom = 24.0
+text = "Create New Form"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 28.0
+margin_right = 1280.0
+margin_bottom = 32.0
+
+[node name="FormEdit" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+margin_top = 8.0
+margin_right = 1280.0
+margin_bottom = 258.0
+
+[node name="AddPage" type="HBoxContainer" parent="VBoxContainer/FormEdit"]
+margin_right = 1280.0
+margin_bottom = 24.0
+
+[node name="PageTitle" type="LineEdit" parent="VBoxContainer/FormEdit/AddPage"]
+margin_right = 1173.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Page Title"
+
+[node name="AddNewPageButton" type="Button" parent="VBoxContainer/FormEdit/AddPage"]
+margin_left = 1177.0
+margin_right = 1280.0
+margin_bottom = 24.0
+text = "Add New Page"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/FormEdit"]
+margin_top = 28.0
+margin_right = 1280.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="VBoxContainer/FormEdit"]
+margin_top = 36.0
+margin_right = 1280.0
+margin_bottom = 50.0
+text = "Show page:"
+
+[node name="PageSelector" type="OptionButton" parent="VBoxContainer/FormEdit"]
+margin_top = 54.0
+margin_right = 1280.0
+margin_bottom = 74.0
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/FormEdit"]
+margin_top = 78.0
+margin_right = 1280.0
+margin_bottom = 82.0
+
+[node name="AddSectionLabels" type="HBoxContainer" parent="VBoxContainer/FormEdit"]
+margin_top = 86.0
+margin_right = 1280.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="VBoxContainer/FormEdit/AddSectionLabels"]
+margin_right = 108.0
+margin_bottom = 14.0
+text = "Add a section to:"
+
+[node name="AddSectionParent" type="Label" parent="VBoxContainer/FormEdit/AddSectionLabels"]
+margin_left = 112.0
+margin_right = 174.0
+margin_bottom = 14.0
+text = "Test Page"
+
+[node name="AddSection" type="HBoxContainer" parent="VBoxContainer/FormEdit"]
+margin_top = 104.0
+margin_right = 1280.0
+margin_bottom = 128.0
+
+[node name="ContainerType" type="OptionButton" parent="VBoxContainer/FormEdit/AddSection"]
+margin_right = 125.0
+margin_bottom = 24.0
+text = "PanelContainer"
+items = [ "PanelContainer", null, false, 0, null, "MarginContainer", null, false, 1, null, "VBoxContainer", null, false, 2, null, "HBoxContainer", null, false, 3, null ]
+selected = 0
+
+[node name="SectionTitle" type="LineEdit" parent="VBoxContainer/FormEdit/AddSection"]
+margin_left = 129.0
+margin_right = 1185.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Section Title"
+
+[node name="AddSectionButton" type="Button" parent="VBoxContainer/FormEdit/AddSection"]
+margin_left = 1189.0
+margin_right = 1280.0
+margin_bottom = 24.0
+text = "New Section"
+
+[node name="AddFormElements" type="VBoxContainer" parent="VBoxContainer/FormEdit"]
+margin_top = 132.0
+margin_right = 1280.0
+margin_bottom = 250.0
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/FormEdit/AddFormElements"]
+margin_right = 1280.0
+margin_bottom = 4.0
+
+[node name="Label" type="Label" parent="VBoxContainer/FormEdit/AddFormElements"]
+margin_top = 8.0
+margin_right = 1280.0
+margin_bottom = 22.0
+text = "Add form items:"
+
+[node name="ItemId" type="LineEdit" parent="VBoxContainer/FormEdit/AddFormElements"]
+margin_right = 58.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Item ID"
+
+[node name="AddFormItems" type="GridContainer" parent="VBoxContainer/FormEdit/AddFormElements"]
+margin_top = 26.0
+margin_right = 1280.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="AddOptions" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_right = 424.0
+margin_bottom = 20.0
+hint_tooltip = "Add a set of radio buttons or multiple-choice answers."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Options"
+
+[node name="AddScale" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 428.0
+margin_right = 852.0
+margin_bottom = 20.0
+hint_tooltip = "Add radio buttons stylized to look like a grading scale."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Scale"
+
+[node name="AddOptionGrid" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 856.0
+margin_right = 1280.0
+margin_bottom = 20.0
+hint_tooltip = "Add a group of radio buttons or multiple-choice answers grouped into rows and columns with labels for each row and column."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Option Grid"
+
+[node name="AddTextInput" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_top = 24.0
+margin_right = 424.0
+margin_bottom = 44.0
+hint_tooltip = "Add free text input."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Text Input"
+
+[node name="AddValidatedInput" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 428.0
+margin_top = 24.0
+margin_right = 852.0
+margin_bottom = 44.0
+hint_tooltip = "Add a single-line text input validated using regular expressions."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Validated Input"
+
+[node name="AddCheckbox" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 856.0
+margin_top = 24.0
+margin_right = 1280.0
+margin_bottom = 44.0
+hint_tooltip = "Add a simple checkbox."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Checkbox"
+
+[node name="AddGenericButton" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_top = 48.0
+margin_right = 424.0
+margin_bottom = 68.0
+hint_tooltip = "Add a generic button."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Generic Button"
+
+[node name="AddCancelButton" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 428.0
+margin_top = 48.0
+margin_right = 852.0
+margin_bottom = 68.0
+hint_tooltip = "Add a button that triggers a signal from the form to cancel. "
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Cancel Button"
+
+[node name="AddSubmitButton" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 856.0
+margin_top = 48.0
+margin_right = 1280.0
+margin_bottom = 68.0
+hint_tooltip = "Add a button that triggers form data submission."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Submit Button"
+
+[node name="AddNextButton" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_top = 72.0
+margin_right = 424.0
+margin_bottom = 92.0
+hint_tooltip = "Add a button that asks the form to show the next page."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Next Button"
+
+[node name="AddBackButton" type="Button" parent="VBoxContainer/FormEdit/AddFormElements/AddFormItems"]
+margin_left = 428.0
+margin_top = 72.0
+margin_right = 852.0
+margin_bottom = 92.0
+hint_tooltip = "Add a button that asks the form to show the previous page."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Back Button"
+
+[node name="AddBranch" type="Button" parent="VBoxContainer/FormEdit/AddFormElements"]
+visible = false
+margin_top = 26.0
+margin_right = 1280.0
+margin_bottom = 46.0
+hint_tooltip = "Add branching behaviour depending on user input."
+size_flags_horizontal = 3
+text = "Branch"
+
+[connection signal="pressed" from="VBoxContainer/CreateForm/CreateFormButton" to="." method="_on_create_new_form"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddPage/AddNewPageButton" to="." method="_on_add_new_page"]
+[connection signal="item_selected" from="VBoxContainer/FormEdit/PageSelector" to="." method="_on_show_page"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddSection/AddSectionButton" to="." method="_on_add_section"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddOptions" to="." method="_on_AddOptions_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddScale" to="." method="_on_AddScale_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddOptionGrid" to="." method="_on_AddOptionGrid_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddTextInput" to="." method="_on_AddTextInput_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddValidatedInput" to="." method="_on_AddValidatedInput_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddCheckbox" to="." method="_on_AddCheckbox_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddGenericButton" to="." method="_on_AddGenericButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddCancelButton" to="." method="_on_AddCancelButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddSubmitButton" to="." method="_on_AddSubmitButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddNextButton" to="." method="_on_AddNextButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddFormItems/AddBackButton" to="." method="_on_AddPreviousButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/FormEdit/AddFormElements/AddBranch" to="." method="_on_AddBranch_pressed"]

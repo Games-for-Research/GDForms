@@ -1,0 +1,224 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://addons/GDForms/Scenes/FormButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/GDForms/Scenes/Checkbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/GDForms/Scenes/ValidatedInput.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/GDForms/Scenes/SubmitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/GDForms/Scenes/CancelButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/GDForms/Scenes/TextInput.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/GDForms/Scenes/BackButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/GDForms/Scenes/NextButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/GDForms/Themes/default_forms_theme.tres" type="Theme" id=9]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 763.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 763.0
+margin_bottom = 428.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 743.0
+margin_bottom = 408.0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+margin_right = 723.0
+margin_bottom = 388.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Aliquam ut porttitor leo a diam sollicitudin tempor id. Id interdum velit laoreet id donec ultrices tincidunt arcu. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Aliquam sem et tortor consequat. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Donec et odio pellentesque diam volutpat commodo sed. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Mattis rhoncus urna neque viverra justo nec ultrices dui. Volutpat lacus laoreet non curabitur gravida. Imperdiet proin fermentum leo vel orci porta.
+
+Consequat id porta nibh venenatis cras sed. Justo laoreet sit amet cursus sit amet. Eu facilisis sed odio morbi quis commodo. Viverra ipsum nunc aliquet bibendum enim facilisis. Accumsan sit amet nulla facilisi morbi. Cursus turpis massa tincidunt dui. Eu nisl nunc mi ipsum faucibus. Nisl pretium fusce id velit ut tortor pretium. Mattis pellentesque id nibh tortor id aliquet lectus proin. Nisi quis eleifend quam adipiscing. Magna ac placerat vestibulum lectus mauris ultrices. Diam maecenas ultricies mi eget mauris. Et odio pellentesque diam volutpat commodo sed. Mi tempus imperdiet nulla malesuada pellentesque. Accumsan in nisl nisi scelerisque eu ultrices."
+autowrap = true
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 767.0
+margin_right = 1280.0
+margin_bottom = 720.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/PanelContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 493.0
+margin_bottom = 700.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_right = 473.0
+margin_bottom = 20.0
+text = "TextInput: use  Control's Rect's  Min Size property to adjust the height."
+
+[node name="TextInput" parent="HBoxContainer/PanelContainer/VBoxContainer2" instance=ExtResource( 6 )]
+margin_top = 24.0
+margin_right = 473.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_top = 228.0
+margin_right = 473.0
+margin_bottom = 248.0
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_top = 252.0
+margin_right = 473.0
+margin_bottom = 272.0
+text = "ValidatedInput"
+
+[node name="ValidatedInput" parent="HBoxContainer/PanelContainer/VBoxContainer2" instance=ExtResource( 3 )]
+margin_top = 276.0
+margin_right = 473.0
+margin_bottom = 306.0
+
+[node name="Label3" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_top = 310.0
+margin_right = 473.0
+margin_bottom = 330.0
+text = "ValidatedInput"
+
+[node name="ValidatedInput2" parent="HBoxContainer/PanelContainer/VBoxContainer2" instance=ExtResource( 3 )]
+margin_top = 334.0
+margin_right = 58.0
+margin_bottom = 364.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_top = 368.0
+margin_right = 473.0
+margin_bottom = 388.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2"]
+margin_top = 392.0
+margin_right = 473.0
+margin_bottom = 680.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
+margin_right = 139.0
+margin_bottom = 288.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Checkbox" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_right = 139.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+label_position = 0
+
+[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 76.0
+margin_right = 139.0
+margin_bottom = 148.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+label_position = 1
+
+[node name="Checkbox3" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 152.0
+margin_right = 64.0
+margin_bottom = 224.0
+size_flags_vertical = 3
+disabled = true
+
+[node name="Checkbox4" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 228.0
+margin_right = 64.0
+margin_bottom = 288.0
+disabled = true
+label_position = 2
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 143.0
+margin_right = 163.0
+margin_bottom = 288.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 167.0
+margin_right = 306.0
+margin_bottom = 288.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Checkbox" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
+margin_right = 139.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+label_position = 0
+
+[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
+margin_top = 76.0
+margin_right = 139.0
+margin_bottom = 148.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+label_position = 1
+
+[node name="Checkbox3" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
+margin_top = 152.0
+margin_right = 64.0
+margin_bottom = 224.0
+size_flags_vertical = 3
+disabled = true
+
+[node name="Checkbox4" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
+margin_top = 228.0
+margin_right = 64.0
+margin_bottom = 288.0
+disabled = true
+label_position = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 310.0
+margin_right = 330.0
+margin_bottom = 288.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 334.0
+margin_right = 473.0
+margin_bottom = 288.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FormButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 139.0
+margin_bottom = 54.0
+
+[node name="CancelButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 58.0
+margin_right = 139.0
+margin_bottom = 112.0
+
+[node name="BackButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 116.0
+margin_right = 139.0
+margin_bottom = 171.0
+
+[node name="NextButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 175.0
+margin_right = 139.0
+margin_bottom = 229.0
+
+[node name="SubmitButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 233.0
+margin_right = 139.0
+margin_bottom = 288.0

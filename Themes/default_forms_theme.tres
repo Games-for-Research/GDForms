@@ -1,0 +1,225 @@
+[gd_resource type="Theme" load_steps=30 format=2]
+
+[ext_resource path="res://addons/GDForms/Themes/default_theme_default_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://addons/GDForms/Themes/Textures/Checkbox_checked.svg" type="Texture" id=2]
+[ext_resource path="res://addons/GDForms/Themes/Textures/Checkbox_unchecked.svg" type="Texture" id=3]
+[ext_resource path="res://addons/GDForms/Themes/Textures/radio_button_checked.svg" type="Texture" id=4]
+[ext_resource path="res://addons/GDForms/Themes/Textures/radio_button_unchecked.svg" type="Texture" id=5]
+[ext_resource path="res://addons/GDForms/Themes/Textures/checkbox_unchecked_disabled.svg" type="Texture" id=6]
+[ext_resource path="res://addons/GDForms/Themes/Textures/radio_button_unchecked_disabled.svg" type="Texture" id=7]
+[ext_resource path="res://addons/GDForms/Themes/Textures/Checkbox_checked_disabled.svg" type="Texture" id=8]
+[ext_resource path="res://addons/GDForms/Themes/Textures/radio_button_checked_disabled.svg" type="Texture" id=9]
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.505882, 0.505882, 0.505882, 1 )
+border_color = Color( 0.701961, 0.701961, 0.701961, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.203922 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.333333, 0.333333, 0.333333, 1 )
+border_color = Color( 0.701961, 0.701961, 0.701961, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.203922 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+border_color = Color( 0.701961, 0.701961, 0.701961, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.203922 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+border_color = Color( 0.701961, 0.701961, 0.701961, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.203922 )
+shadow_size = 2
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxLine" id=10]
+color = Color( 0.239216, 0.239216, 0.239216, 1 )
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0, 0, 0, 0.113725 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxLine" id=18]
+color = Color( 0.239216, 0.239216, 0.239216, 1 )
+thickness = 2
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+border_width_top = 20
+expand_margin_top = 20.0
+shadow_color = Color( 0, 0, 0, 0.301961 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 0.403922 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.398438, 0.398438, 0.398438, 1 )
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 0.403922 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.352941, 0.427451, 0.513726, 1 )
+border_width_top = 2
+expand_margin_top = 2.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.380392, 0.380392, 0.380392, 1 )
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.513726, 0.513726, 0.513726, 1 )
+expand_margin_bottom = 2.0
+
+[resource]
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 12 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 13 )
+Button/styles/normal = SubResource( 14 )
+Button/styles/pressed = SubResource( 15 )
+CheckBox/icons/checked = ExtResource( 2 )
+CheckBox/icons/checked_disabled = ExtResource( 8 )
+CheckBox/icons/radio_checked = ExtResource( 4 )
+CheckBox/icons/radio_checked_disabled = ExtResource( 9 )
+CheckBox/icons/radio_unchecked = ExtResource( 5 )
+CheckBox/icons/radio_unchecked_disabled = ExtResource( 7 )
+CheckBox/icons/unchecked = ExtResource( 3 )
+CheckBox/icons/unchecked_disabled = ExtResource( 6 )
+CheckBox/styles/disabled = SubResource( 16 )
+CheckBox/styles/focus = SubResource( 19 )
+CheckBox/styles/hover = SubResource( 20 )
+CheckBox/styles/hover_pressed = SubResource( 21 )
+CheckBox/styles/normal = SubResource( 17 )
+CheckBox/styles/pressed = SubResource( 22 )
+GridContainer/constants/hseparation = 3
+GridContainer/constants/vseparation = 20
+HSeparator/constants/separation = 20
+HSeparator/styles/separator = SubResource( 10 )
+Label/colors/font_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+Label/fonts/font = ExtResource( 1 )
+LineEdit/colors/cursor_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+LineEdit/colors/font_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+LineEdit/fonts/font = ExtResource( 1 )
+LineEdit/styles/normal = SubResource( 11 )
+PanelContainer/styles/panel = SubResource( 8 )
+TextEdit/colors/caret_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+TextEdit/colors/font_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.239216, 0.239216, 0.239216, 1 )
+TextEdit/fonts/font = ExtResource( 1 )
+TextEdit/styles/normal = SubResource( 9 )
+VSeparator/constants/separation = 20
+VSeparator/styles/separator = SubResource( 18 )
+WindowDialog/styles/panel = SubResource( 23 )
+gdforms_GridContainer/colors/border_color = Color( 0.419608, 0.419608, 0.419608, 1 )
+gdforms_GridContainer/styles/cell_style = SubResource( 4 )
+gdforms_GridContainer/styles/column_header_style = SubResource( 6 )
+gdforms_GridContainer/styles/footer_style = SubResource( 7 )
+gdforms_GridContainer/styles/row_header_style = SubResource( 5 )
+gdforms_OptionGrid/colors/line_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+gdforms_OptionGrid/constants/cell_padding_bottom = 10
+gdforms_OptionGrid/constants/cell_padding_left = 0
+gdforms_OptionGrid/constants/cell_padding_right = 0
+gdforms_OptionGrid/constants/cell_padding_top = 10
+gdforms_OptionGrid/constants/column_padding_left = 10
+gdforms_OptionGrid/constants/column_padding_right = 10
+gdforms_OptionGrid/constants/header_padding_bottom = 0
+gdforms_OptionGrid/constants/header_padding_left = 0
+gdforms_OptionGrid/constants/header_padding_right = 0
+gdforms_OptionGrid/constants/header_padding_top = 0
+gdforms_OptionGrid/constants/line_width = 2
+gdforms_OptionGrid/constants/row_padding_bottom = 10
+gdforms_OptionGrid/constants/row_padding_top = 10
+gdforms_Options/colors/line_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+gdforms_Options/constants/line_width = 3
+gdforms_Options/constants/separation = 10

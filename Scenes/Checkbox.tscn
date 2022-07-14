@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/GDForms/Scenes/Utilities/FormItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/GDForms/Scripts/Checkbox.gd" type="Script" id=2]
+
+[node name="Checkbox" instance=ExtResource( 1 )]
+margin_right = 499.0
+margin_bottom = 353.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 2 )
+text = "Checkbox"
+label_position = 3
+
+[node name="Container" type="GridContainer" parent="." index="0"]
+margin_right = 499.0
+margin_bottom = 353.0
+
+[node name="Label" type="Label" parent="Container" index="0"]
+margin_right = 499.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Checkbox"
+align = 1
+valign = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Container" index="1"]
+margin_top = 18.0
+margin_right = 499.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+
+[node name="Button" type="CheckBox" parent="Container/CenterContainer" index="0"]
+margin_left = 237.0
+margin_right = 261.0
+margin_bottom = 24.0
+
+[connection signal="toggled" from="Container/CenterContainer/Button" to="." method="_on_Button_toggled"]

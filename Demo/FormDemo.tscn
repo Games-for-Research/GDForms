@@ -1,0 +1,488 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://addons/GDForms/Scenes/Form.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/GDForms/Scenes/Checkbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/GDForms/Scenes/Options.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/GDForms/Scenes/Scale.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/GDForms/Scenes/OptionGrid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/GDForms/Scenes/TextInput.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/GDForms/Scenes/ValidatedInput.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/GDForms/Scenes/FormPage.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/GDForms/Scenes/NextButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/GDForms/Scenes/CancelButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/GDForms/Scenes/SubmitButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://addons/GDForms/Scenes/BackButton.tscn" type="PackedScene" id=12]
+[ext_resource path="res://addons/GDForms/Demo/FormDemo.gd" type="Script" id=13]
+[ext_resource path="res://addons/GDForms/Scenes/Branch.tscn" type="PackedScene" id=14]
+[ext_resource path="res://addons/GDForms/Themes/default_forms_theme.tres" type="Theme" id=15]
+[ext_resource path="res://addons/GDForms/Scenes/FormButton.tscn" type="PackedScene" id=16]
+
+[node name="FormDemo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 15 )
+script = ExtResource( 13 )
+
+[node name="Form" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+form_id = "Demo Form"
+
+[node name="Page 1" parent="Form" instance=ExtResource( 8 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1"]
+margin_right = 1280.0
+margin_bottom = 1053.0
+
+[node name="User Consent" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 223.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/User Consent"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 203.0
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 89.0
+text = "This is a sample form. You can use standard Godot UI elements such as Label, HSeparator and VSeparator, as well as containers like VBoxContainer,  HBoxContainer and PanelContainer  to design your forms. However, any user input that needs to be reported to the form should be done through  the custom elements demonstrated here.
+
+Here is a simple checkbox. You can change the text and position of the label."
+autowrap = true
+
+[node name="HSeparator" type="HSeparator" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer"]
+margin_top = 93.0
+margin_right = 1240.0
+margin_bottom = 113.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer"]
+margin_top = 117.0
+margin_right = 1240.0
+margin_bottom = 183.0
+
+[node name="Checkbox" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_right = 618.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+item_id = "agreement"
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer/HBoxContainer/Checkbox" instance=ExtResource( 14 )]
+target = NodePath("../../../../../Radio Buttons")
+condition_type = 0
+
+[node name="Label2" type="Label" parent="Form/Page 1/VBoxContainer/User Consent/VBoxContainer/HBoxContainer"]
+margin_left = 622.0
+margin_right = 1240.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+text = "By adding a Branch instance inside a GodotForms UI widget, you can turn any UI element on and off depending on user input. Here, we will display a set of radio buttons when the user interacts with the checkbox."
+autowrap = true
+
+[node name="Radio Buttons" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_top = 227.0
+margin_right = 1280.0
+margin_bottom = 394.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Radio Buttons"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 147.0
+
+[node name="Label2" type="Label" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 43.0
+text = "Here are some radio buttons (Options). Change the number of options and their labels by editing the \"labels\" property. You can customize the look of GodotForms element by editing or creating themes. Take a look at the Themes folder for an example."
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer"]
+margin_top = 47.0
+margin_right = 1240.0
+margin_bottom = 127.0
+
+[node name="RadioButtons" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_right = 618.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+item_id = "colors"
+labels = [ "Multiple selections", "Likert-like scales", "Option grids" ]
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer/HBoxContainer/RadioButtons" instance=ExtResource( 14 )]
+target = NodePath("../../../../../Multiple Selections")
+condition_type = 1
+options_index = 0
+
+[node name="Branch2" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer/HBoxContainer/RadioButtons" instance=ExtResource( 14 )]
+target = NodePath("../../../../../Likert-like Scale")
+condition_type = 1
+options_index = 1
+
+[node name="Branch3" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer/HBoxContainer/RadioButtons" instance=ExtResource( 14 )]
+target = NodePath("../../../../../Option Grid")
+condition_type = 1
+options_index = 2
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Radio Buttons/VBoxContainer/HBoxContainer"]
+margin_left = 622.0
+margin_top = 7.0
+margin_right = 1240.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+text = "Here, there are three Branch instances added to the RadioButtons. Use the  \"Options Index\" property to tie a specific user selection to a branch. Note that you can specify the starting index for RadioButtons, and \"Options Index\" takes into account this offset."
+autowrap = true
+
+[node name="Multiple Selections" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_top = 398.0
+margin_right = 1280.0
+margin_bottom = 644.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Multiple Selections"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 226.0
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 20.0
+text = "Multiple selections: this is simply an Options  with the \"Multiple Selections\" property turned on."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer"]
+margin_top = 24.0
+margin_right = 1240.0
+margin_bottom = 206.0
+
+[node name="MultipleSelections" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_right = 285.0
+margin_bottom = 182.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+item_id = "programming languages"
+multiple_selections = true
+labels = [ "JavaScript", "GDScript", "C++", "C#", "Other" ]
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/MultipleSelections" instance=ExtResource( 14 )]
+target = NodePath("../../VBoxContainer/Correct Choice")
+alternate_target = NodePath("../../VBoxContainer/Wrong Choice")
+condition_type = 1
+answer_key_criteria = 0
+answer_key = PoolIntArray( 1, 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer"]
+margin_left = 289.0
+margin_right = 1240.0
+margin_bottom = 182.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 951.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+text = "Here we use a Branch to turn the display of the \"Next\" button on and off. For multiple selections, use the \"Answer Key\" property to specify correct answers and trigger branching. Here, \"GDScript\" and \"C#\" are the correct answers. Instead of directly showing the \"next\" button, we toggle between two identical buttons -- this way we can control the flow depending on \"wrong\" or \"correct\" answers. "
+autowrap = true
+
+[node name="Wrong Choice" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 70.0
+margin_right = 951.0
+margin_bottom = 124.0
+
+[node name="FormButton" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Wrong Choice" instance=ExtResource( 16 )]
+margin_right = 951.0
+margin_bottom = 30.0
+disabled = false
+text = "Submit Answer"
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Wrong Choice/FormButton" instance=ExtResource( 14 )]
+target = NodePath("../../../../../../../Navigation/HBoxContainer/NextButton")
+disable_target = NodePath("../../../../MultipleSelections")
+
+[node name="Branch2" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Wrong Choice/FormButton" instance=ExtResource( 14 )]
+target = NodePath("../../Label")
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Wrong Choice"]
+margin_top = 34.0
+margin_right = 951.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+text = "Wrong answer!"
+autowrap = true
+
+[node name="Correct Choice" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 951.0
+margin_bottom = 182.0
+
+[node name="FormButton" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Correct Choice" instance=ExtResource( 16 )]
+margin_right = 951.0
+margin_bottom = 30.0
+disabled = false
+text = "Submit Answer"
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Correct Choice/FormButton" instance=ExtResource( 14 )]
+target = NodePath("../../../../../../../Navigation/HBoxContainer/NextButton")
+disable_target = NodePath("../../../../MultipleSelections")
+
+[node name="Branch2" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Correct Choice/FormButton" instance=ExtResource( 14 )]
+target = NodePath("../../Label")
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Multiple Selections/VBoxContainer/HBoxContainer/VBoxContainer/Correct Choice"]
+margin_top = 34.0
+margin_right = 951.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+text = "Correct!"
+autowrap = true
+
+[node name="Likert-like Scale" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_top = 648.0
+margin_right = 1280.0
+margin_bottom = 795.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 1/VBoxContainer/Likert-like Scale"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 127.0
+
+[node name="Label4" type="Label" parent="Form/Page 1/VBoxContainer/Likert-like Scale/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 43.0
+text = "Likert-like scales are just regular Options  that have been stylized in a certain way. Take a look at the Options_theme_demo scene for all the possible variations. We have also set the start index to -2 so that \"neutral\" is at index 0."
+autowrap = true
+
+[node name="Scale" parent="Form/Page 1/VBoxContainer/Likert-like Scale/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 47.0
+margin_right = 1240.0
+margin_bottom = 107.0
+item_id = "likert"
+start_index = -2
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Likert-like Scale/VBoxContainer/Scale" instance=ExtResource( 14 )]
+target = NodePath("../../../../Navigation/HBoxContainer/NextButton")
+condition_type = 0
+
+[node name="Option Grid" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_top = 799.0
+margin_right = 1280.0
+margin_bottom = 979.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 1/VBoxContainer/Option Grid"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 160.0
+
+[node name="OptionGrid" parent="Form/Page 1/VBoxContainer/Option Grid/HBoxContainer" instance=ExtResource( 5 )]
+margin_right = 618.0
+margin_bottom = 140.0
+size_flags_vertical = 1
+item_id = "grid"
+start_index = -1
+draw_line = true
+columns = [ "Poor", "Average", "Good" ]
+rows = [ "Service", "Food", "Mood" ]
+
+[node name="Branch" parent="Form/Page 1/VBoxContainer/Option Grid/HBoxContainer/OptionGrid" instance=ExtResource( 14 )]
+target = NodePath("../../../../Navigation/HBoxContainer/NextButton")
+condition_type = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Form/Page 1/VBoxContainer/Option Grid/HBoxContainer"]
+margin_left = 622.0
+margin_right = 1240.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="Form/Page 1/VBoxContainer/Option Grid/HBoxContainer/MarginContainer"]
+margin_left = 10.0
+margin_top = 53.0
+margin_right = 618.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+text = "The OptionGrid allows you to group several rows of options. Use the \"Rows\" and \"Columns\" properties to set the labels and the number of rows and columns. "
+autowrap = true
+
+[node name="Navigation" type="PanelContainer" parent="Form/Page 1/VBoxContainer"]
+margin_top = 983.0
+margin_right = 1280.0
+margin_bottom = 1053.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 1/VBoxContainer/Navigation"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 50.0
+
+[node name="CancelButton" parent="Form/Page 1/VBoxContainer/Navigation/HBoxContainer" instance=ExtResource( 10 )]
+margin_right = 618.0
+margin_bottom = 30.0
+size_flags_vertical = 1
+disabled = false
+notification = 0
+
+[node name="NextButton" parent="Form/Page 1/VBoxContainer/Navigation/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 622.0
+margin_right = 1240.0
+margin_bottom = 30.0
+size_flags_vertical = 1
+disabled = false
+
+[node name="Page 2" parent="Form" instance=ExtResource( 8 )]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 2"]
+margin_right = 1280.0
+margin_bottom = 336.0
+
+[node name="Free Text Input" type="PanelContainer" parent="Form/Page 2/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 164.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 2/VBoxContainer/Free Text Input"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 144.0
+
+[node name="Label" type="Label" parent="Form/Page 2/VBoxContainer/Free Text Input/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 20.0
+text = "Free text input."
+
+[node name="TextInput" parent="Form/Page 2/VBoxContainer/Free Text Input/VBoxContainer" instance=ExtResource( 6 )]
+margin_top = 24.0
+margin_right = 1240.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 100 )
+item_id = "Free text"
+
+[node name="Branch" parent="Form/Page 2/VBoxContainer/Free Text Input/VBoxContainer/TextInput" instance=ExtResource( 14 )]
+condition_type = 0
+
+[node name="Validated Input" type="PanelContainer" parent="Form/Page 2/VBoxContainer"]
+margin_top = 168.0
+margin_right = 1280.0
+margin_bottom = 262.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form/Page 2/VBoxContainer/Validated Input"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="Form/Page 2/VBoxContainer/Validated Input/VBoxContainer"]
+margin_right = 1240.0
+margin_bottom = 20.0
+text = "Validated single line text input. You can use regular expressions to limit what users can fill in. Here we use a Branch to only show the submit button if the user types in '1234'."
+
+[node name="ValidatedInput" parent="Form/Page 2/VBoxContainer/Validated Input/VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 24.0
+margin_right = 1240.0
+margin_bottom = 54.0
+item_id = "user_id"
+validation_error_message = NodePath("../Validation Error")
+
+[node name="Branch" parent="Form/Page 2/VBoxContainer/Validated Input/VBoxContainer/ValidatedInput" instance=ExtResource( 14 )]
+target = NodePath("../../../../Navigation/HBoxContainer/SubmitButton")
+condition_type = 1
+text = "1234"
+
+[node name="Validation Error" type="Label" parent="Form/Page 2/VBoxContainer/Validated Input/VBoxContainer"]
+visible = false
+margin_top = 688.0
+margin_right = 1012.0
+margin_bottom = 702.0
+text = "You must enter a 4-digit number."
+
+[node name="Navigation" type="PanelContainer" parent="Form/Page 2/VBoxContainer"]
+margin_top = 266.0
+margin_right = 1280.0
+margin_bottom = 336.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Form/Page 2/VBoxContainer/Navigation"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 50.0
+
+[node name="CancelButton" parent="Form/Page 2/VBoxContainer/Navigation/HBoxContainer" instance=ExtResource( 10 )]
+margin_right = 410.0
+margin_bottom = 30.0
+disabled = false
+notification = 0
+
+[node name="BackButton" parent="Form/Page 2/VBoxContainer/Navigation/HBoxContainer" instance=ExtResource( 12 )]
+margin_left = 414.0
+margin_right = 825.0
+margin_bottom = 30.0
+disabled = false
+
+[node name="SubmitButton" parent="Form/Page 2/VBoxContainer/Navigation/HBoxContainer" instance=ExtResource( 11 )]
+margin_left = 829.0
+margin_right = 1240.0
+margin_bottom = 30.0
+disabled = false
+
+[node name="CancelDialog" type="AcceptDialog" parent="."]
+margin_left = 529.0
+margin_top = 382.0
+margin_right = 728.0
+margin_bottom = 486.0
+dialog_text = "Form submission canceled!"
+
+[node name="SubmitDialog" type="AcceptDialog" parent="."]
+margin_left = 316.0
+margin_top = 71.0
+margin_right = 944.0
+margin_bottom = 707.0
+dialog_text = "Form Submitted. Here is your data:"
+
+[node name="Container" type="VBoxContainer" parent="SubmitDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 28.0
+margin_right = -8.0
+margin_bottom = -46.0
+
+[node name="IdLabel" type="Label" parent="SubmitDialog/Container"]
+margin_right = 612.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubmitDialog/Container"]
+margin_top = 34.0
+margin_right = 612.0
+margin_bottom = 562.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DataView" type="Label" parent="SubmitDialog/Container/ScrollContainer"]
+margin_bottom = 20.0
+
+[connection signal="cancel" from="Form" to="." method="_on_Form_cancel"]
+[connection signal="submit" from="Form" to="." method="_on_Form_submit"]
+[connection signal="confirmed" from="CancelDialog" to="." method="_on_CancelDialog_confirmed"]
+[connection signal="confirmed" from="SubmitDialog" to="." method="_on_SubmitDialog_confirmed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/GDForms/Themes/default_forms_theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/GDForms/Scripts/DecoratedGridContainer.gd" type="Script" id=2]
+
+[node name="DecoratedGridContainer" type="GridContainer"]
+margin_right = 315.0
+margin_bottom = 189.0
+theme = ExtResource( 1 )
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+script = ExtResource( 2 )
+header_rows = 1
+header_columns = 1
+footer_rows = 1
