@@ -115,33 +115,44 @@ size_flags_vertical = 3
 
 [node name="Checkbox" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
 margin_right = 139.0
-margin_bottom = 72.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 label_position = 0
 
-[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
-margin_top = 76.0
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 46.0
 margin_right = 139.0
-margin_bottom = 148.0
+margin_bottom = 66.0
+
+[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
+margin_top = 70.0
+margin_right = 139.0
+margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 label_position = 1
 
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 116.0
+margin_right = 139.0
+margin_bottom = 136.0
+
 [node name="Checkbox3" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
-margin_top = 152.0
+margin_top = 140.0
 margin_right = 64.0
-margin_bottom = 224.0
+margin_bottom = 200.0
 size_flags_vertical = 3
-disabled = true
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 204.0
+margin_right = 139.0
+margin_bottom = 224.0
 
 [node name="Checkbox4" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer2" instance=ExtResource( 2 )]
 margin_top = 228.0
 margin_right = 64.0
 margin_bottom = 288.0
-disabled = true
 label_position = 2
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
@@ -158,33 +169,44 @@ size_flags_vertical = 3
 
 [node name="Checkbox" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
 margin_right = 139.0
-margin_bottom = 72.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 label_position = 0
 
-[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
-margin_top = 76.0
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3"]
+margin_top = 46.0
 margin_right = 139.0
-margin_bottom = 148.0
+margin_bottom = 66.0
+
+[node name="Checkbox2" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
+margin_top = 70.0
+margin_right = 139.0
+margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 label_position = 1
 
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3"]
+margin_top = 116.0
+margin_right = 139.0
+margin_bottom = 136.0
+
 [node name="Checkbox3" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
-margin_top = 152.0
+margin_top = 140.0
 margin_right = 64.0
-margin_bottom = 224.0
+margin_bottom = 200.0
 size_flags_vertical = 3
-disabled = true
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3"]
+margin_top = 204.0
+margin_right = 139.0
+margin_bottom = 224.0
 
 [node name="Checkbox4" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer3" instance=ExtResource( 2 )]
 margin_top = 228.0
 margin_right = 64.0
 margin_bottom = 288.0
-disabled = true
 label_position = 2
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer"]
@@ -202,23 +224,28 @@ size_flags_vertical = 3
 [node name="FormButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_right = 139.0
 margin_bottom = 54.0
+disabled = false
 
 [node name="CancelButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 5 )]
 margin_top = 58.0
 margin_right = 139.0
 margin_bottom = 112.0
+disabled = false
 
 [node name="BackButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 7 )]
 margin_top = 116.0
 margin_right = 139.0
 margin_bottom = 171.0
+disabled = false
 
 [node name="NextButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 8 )]
 margin_top = 175.0
 margin_right = 139.0
 margin_bottom = 229.0
+disabled = false
 
 [node name="SubmitButton" parent="HBoxContainer/PanelContainer/VBoxContainer2/HBoxContainer/VBoxContainer" instance=ExtResource( 4 )]
 margin_top = 233.0
 margin_right = 139.0
 margin_bottom = 288.0
+disabled = false
